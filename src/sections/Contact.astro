@@ -1,6 +1,5 @@
 ---
-import ContactCard from '../components/ContactCard';
-import { FaWhatsapp, FaInstagram, FaMapMarkerAlt } from 'react-icons/fa';
+import ContactGrid from '../components/ContactGrid';
 ---
 
 <section id="contacto" class="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] text-white relative overflow-hidden">
@@ -21,51 +20,7 @@ import { FaWhatsapp, FaInstagram, FaMapMarkerAlt } from 'react-icons/fa';
     </div>
 
     <!-- Tarjetas de contacto -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-      <ContactCard 
-        icon={<FaWhatsapp />}
-        title="WhatsApp"
-        content={
-          <div>
-            <p className="font-semibold text-lg">310 260 86 76</p>
-            <p className="text-sm mt-2">Haz clic para chatear</p>
-          </div>
-        }
-        link="https://wa.me/573102608676"
-        delay={0.1}
-        client:visible
-      />
-      
-      <ContactCard 
-        icon={<FaInstagram />}
-        title="Instagram"
-        content={
-          <div>
-            <p className="font-semibold text-lg">@od.mariana.henao</p>
-            <p className="text-sm mt-2">Sígueme en redes</p>
-          </div>
-        }
-        link="https://www.instagram.com/od.mariana.henao"
-        delay={0.2}
-        client:visible
-      />
-      
-      <ContactCard 
-        icon={<FaMapMarkerAlt />}
-        title="Ubicación"
-        content={
-          <div>
-            <p className="font-semibold">Calle 64A No. 21 - 10</p>
-            <p className="text-sm">Edificio Portal del Cable</p>
-            <p className="text-sm">Local 14, Manizales</p>
-            <p className="text-sm mt-2">Ver en Google Maps</p>
-          </div>
-        }
-        link="https://www.google.com/maps/search/?api=1&query=Calle+64A+No.+21+-+10+Edificio+Portal+del+Cable+Manizales"
-        delay={0.3}
-        client:visible
-      />
-    </div>
+    <ContactGrid client:visible />
 
     <!-- CTA final -->
     <div class="text-center">
