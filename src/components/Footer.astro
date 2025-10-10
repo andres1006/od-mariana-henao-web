@@ -1,0 +1,62 @@
+---
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+---
+
+<footer class="bg-[var(--color-primary-dark)] text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center space-y-6">
+      <!-- Logo -->
+      <div class="flex flex-col items-center">
+        <span class="text-3xl font-script text-white">Mariana Henao</span>
+        <span class="text-sm font-sans font-medium text-white/90 mt-1">ODONTÓLOGA</span>
+      </div>
+
+      <!-- Redes Sociales -->
+      <div class="flex items-center space-x-6">
+        <a 
+          href="https://www.instagram.com/od.mariana.henao" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-2xl hover:text-[var(--color-accent)] transition-colors duration-300"
+          aria-label="Instagram"
+        >
+          <FaInstagram />
+        </a>
+        <a 
+          href="https://wa.me/573102608676" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-2xl hover:text-[var(--color-accent)] transition-colors duration-300"
+          aria-label="WhatsApp"
+        >
+          <FaWhatsapp />
+        </a>
+      </div>
+
+      <!-- Ubicación -->
+      <div class="text-center text-sm text-white/80">
+        <p>Calle 64A No. 21 - 10, Edificio Portal del Cable - Local 14</p>
+        <p>Manizales, Caldas - Colombia</p>
+      </div>
+
+      <!-- Divider -->
+      <div class="w-full border-t border-white/20 pt-6">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0 text-sm text-white/70">
+          <p>&copy; 2025 Mariana Henao Odontóloga. Todos los derechos reservados.</p>
+          <p>Diseñado y desarrollado con ❤️</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .font-script {
+    font-family: var(--font-script);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+</style>
+

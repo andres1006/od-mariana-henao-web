@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton';
+import Hero from '../sections/Hero.astro';
+import Services from '../sections/Services.astro';
+import About from '../sections/About.astro';
+import Contact from '../sections/Contact.astro';
+---
+
+<Layout 
+  title="Odontóloga Mariana Henao | Manizales - Sonrisas Saludables y Hermosas"
+  description="Odontología especializada en Manizales. Servicios de prevención, rehabilitación oral, estética dental y cirugía oral. Con nosotros descubre la mejor versión de ti."
+>
+  <Header />
+  
+  <main>
+    <Hero />
+    <Services />
+    <About />
+    <Contact />
+  </main>
+
+  <Footer />
+  
+  <!-- Botón flotante de WhatsApp -->
+  <WhatsAppButton client:load />
+</Layout>

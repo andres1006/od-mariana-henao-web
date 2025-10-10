@@ -1,0 +1,24 @@
+---
+import ServicesGrid from '../components/ServicesGrid';
+---
+
+<section id="servicios" class="bg-[var(--color-bg-light)] relative overflow-hidden">
+  <!-- Monograma MH de fondo -->
+  <div class="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/4 opacity-5 pointer-events-none">
+    <span class="text-[15rem] md:text-[25rem] font-bold text-[var(--color-bg-monogram)]">MH</span>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Título -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
+        Nuestros Servicios
+      </h2>
+      <div class="w-24 h-1 bg-[var(--color-primary)] mx-auto rounded-full"></div>
+    </div>
+
+    <!-- Grid de servicios -->
+    <ServicesGrid client:visible />
+  </div>
+</section>
+
