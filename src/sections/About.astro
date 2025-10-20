@@ -2,65 +2,67 @@
 // About Section
 ---
 
-<section id="acerca" class="bg-white relative overflow-hidden">
-  <!-- Monograma MH de fondo -->
-  <div class="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/4 opacity-5 pointer-events-none">
-    <span class="text-[15rem] md:text-[25rem] font-bold text-[var(--color-bg-monogram)]">MH</span>
-  </div>
-
+<section id="acerca" class="bg-[var(--color-bg-light)] relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <!-- Imagen -->
-      <div class="order-2 lg:order-1 about-image">
-        <div class="relative max-w-md mx-auto">
-          <!-- Círculo decorativo -->
-          <div class="absolute -top-4 -left-4 w-full h-full rounded-full border-4 border-[var(--color-primary)]/20 z-0"></div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 lg:py-20">
+      
+      <!-- Lado izquierdo - Imagen -->
+      <div class="about-image order-2 lg:order-1">
+        <div class="relative max-w-lg mx-auto">
+          <!-- Imagen de la doctora -->
+          <img 
+            src="/images/Fotos/DSC_0180.JPG" 
+            alt="Dra. Mariana Henao - Odontóloga profesional" 
+            class="w-full h-[350px] lg:h-[450px] object-cover rounded-2xl shadow-2xl"
+          />
           
-          <!-- Contenedor de la imagen -->
-          <div class="relative z-10 rounded-full overflow-hidden aspect-square shadow-2xl">
-            <!-- Placeholder - Reemplazar con imagen real -->
-            <div class="w-full h-full bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)] flex items-center justify-center">
-              <span class="text-white text-8xl font-bold opacity-50">MH</span>
-            </div>
-            <!-- <img src="/images/mariana-henao.jpg" alt="Dra. Mariana Henao" class="w-full h-full object-cover" /> -->
-          </div>
-
           <!-- Elemento decorativo -->
-          <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-[var(--color-accent)]/10 rounded-full -z-10"></div>
+          <div class="absolute -bottom-4 -right-4 w-24 h-24 lg:w-32 lg:h-32 bg-[var(--color-primary)]/10 rounded-full -z-10"></div>
         </div>
       </div>
 
-      <!-- Contenido de texto -->
-      <div class="order-1 lg:order-2 about-content">
+      <!-- Lado derecho - Contenido -->
+      <div class="about-content order-1 lg:order-2">
         <div class="lg:pl-8">
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-6">
-            Acerca de mí
-          </h2>
-          <div class="w-24 h-1 bg-[var(--color-primary)] rounded-full mb-8"></div>
+          <!-- Título con efecto de fondo -->
+          <div class="relative mb-8 lg:mb-12">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-primary)] relative z-10">
+              Acerca de mi
+            </h2>
+            <!-- Letras de fondo - ocultas en móviles -->
+            <div class="hidden lg:block absolute -top-4 -left-4 text-6xl lg:text-7xl font-bold text-gray-200 opacity-50 -z-10">
+              Ac
+            </div>
+            <div class="hidden lg:block absolute -bottom-4 -right-4 text-6xl lg:text-7xl font-bold text-gray-200 opacity-50 -z-10">
+              mi
+            </div>
+          </div>
           
-          <div class="space-y-6 text-[var(--color-text-dark)]/80 text-lg leading-relaxed">
+          <div class="space-y-4 lg:space-y-6 text-gray-700 text-base lg:text-lg leading-relaxed">
             <p>
               Soy <span class="font-semibold text-[var(--color-text-dark)]">Mariana Henao</span>, 
-              odontóloga de la Universidad Autónoma de Manizales. Con años de experiencia, 
-              mi pasión es ayudar a las personas a tener una sonrisa saludable y hermosa.
+              odontóloga de la Universidad Autónoma de Manizales. Con años de experiencia en el campo 
+              puedo ayudarte con cualquier necesidad dental que tengas, desde limpiezas regulares y 
+              tratamientos estéticos hasta procedimientos más avanzados.
             </p>
             
             <p>
-              Mi enfoque está en brindar un cuidado dental de calidad y personalizado, 
-              asegurando que cada visita sea una experiencia cómoda, única y positiva.
+              Siempre me aseguro de que mis pacientes se sientan cómodos y seguros en mi consultorio. 
+              Me esfuerzo por hacer que cada visita sea una experiencia única y positiva.
             </p>
 
             <p>
-              Cada sonrisa es única y merece un tratamiento especializado. 
-              Por eso, me comprometo a ofrecerte la mejor atención, utilizando técnicas 
-              modernas y un trato humano que te hará sentir en confianza.
+              Mi pasión es ayudar a las personas a tener una sonrisa saludable y hermosa. 
+              Mi enfoque está en brindar un cuidado dental de calidad y personalizado para cada uno de mis pacientes.
             </p>
           </div>
 
-          <div class="mt-10">
+          <div class="mt-8 lg:mt-12">
             <a 
-              href="#contacto"
-              class="inline-block px-8 py-4 bg-[var(--color-primary)] text-white font-semibold rounded-full hover:bg-[var(--color-primary-dark)] hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              href="https://wa.me/573102608676"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block px-6 py-3 lg:px-8 lg:py-4 bg-[var(--color-primary)] text-white font-semibold text-base lg:text-lg rounded-full hover:bg-[var(--color-primary-dark)] hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
             >
               Agenda tu cita
             </a>

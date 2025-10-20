@@ -33,17 +33,77 @@ body {
 
 /* Estilos para secciones */
 section {
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
 }
 
 @media (min-width: 768px) {
   section {
-    padding: 6rem 2rem;
+    padding: 5rem 2rem;
   }
 }
 
 @media (min-width: 1024px) {
   section {
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
   }
+}
+
+/* Mejoras responsive */
+@media (max-width: 640px) {
+  /* Ajustes para móviles pequeños */
+  .text-5xl { font-size: 2.5rem; }
+  .text-6xl { font-size: 3rem; }
+  .text-7xl { font-size: 3.5rem; }
+  .text-8xl { font-size: 4rem; }
+  
+  /* Espaciado reducido en móviles */
+  .mb-16 { margin-bottom: 2rem; }
+  .mb-12 { margin-bottom: 1.5rem; }
+  .mb-8 { margin-bottom: 1.5rem; }
+  
+  /* Imágenes más pequeñas en móviles */
+  .h-[500px] { height: 300px; }
+  .h-[450px] { height: 280px; }
+  .h-[400px] { height: 250px; }
+  .h-[350px] { height: 220px; }
+  
+  /* Padding reducido en móviles */
+  .px-8 { padding-left: 1rem; padding-right: 1rem; }
+  .px-6 { padding-left: 0.75rem; padding-right: 0.75rem; }
+  
+  /* Texto más pequeño en móviles */
+  .text-xl { font-size: 1.125rem; }
+  .text-2xl { font-size: 1.25rem; }
+  .text-3xl { font-size: 1.5rem; }
+  .text-4xl { font-size: 1.875rem; }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* Ajustes para tablets */
+  .text-7xl { font-size: 4rem; }
+  .text-8xl { font-size: 4.5rem; }
+  .text-6xl { font-size: 3.5rem; }
+  .text-5xl { font-size: 3rem; }
+  
+  .h-[500px] { height: 400px; }
+  .h-[450px] { height: 380px; }
+  .h-[400px] { height: 350px; }
+  .h-[350px] { height: 320px; }
+}
+
+/* Mejoras generales para mejor legibilidad */
+@media (max-width: 768px) {
+  /* Mejor espaciado en móviles */
+  .gap-16 { gap: 2rem; }
+  .gap-12 { gap: 1.5rem; }
+  
+  /* Texto centrado en móviles */
+  .text-left { text-align: center; }
+  
+  /* Padding de secciones más pequeño */
+  section { padding: 2rem 1rem; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  section { padding: 4rem 2rem; }
 }
