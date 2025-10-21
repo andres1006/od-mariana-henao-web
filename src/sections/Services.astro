@@ -2,61 +2,89 @@
 // Services Section
 ---
 
-<section id="servicios" class="bg-white relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 lg:py-20">
-      
-      <!-- Lado izquierdo - Servicios -->
-      <div class="services-content order-2 lg:order-1">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-primary)] mb-8 lg:mb-12">
-          Nuestros servicios
-        </h2>
-        
-        <!-- Lista de servicios como pills -->
-        <div class="space-y-3 lg:space-y-4">
-          <div class="bg-[var(--color-primary)] text-white px-6 py-3 lg:px-8 lg:py-4 rounded-full text-lg lg:text-xl font-semibold hover:bg-[var(--color-primary-dark)] transition-colors duration-300 cursor-pointer text-center lg:text-left">
-            Odontología preventiva
-          </div>
-          
-          <div class="bg-[var(--color-primary)] text-white px-6 py-3 lg:px-8 lg:py-4 rounded-full text-lg lg:text-xl font-semibold hover:bg-[var(--color-primary-dark)] transition-colors duration-300 cursor-pointer text-center lg:text-left">
-            Rehabilitación oral
-          </div>
-          
-          <div class="bg-[var(--color-primary)] text-white px-6 py-3 lg:px-8 lg:py-4 rounded-full text-lg lg:text-xl font-semibold hover:bg-[var(--color-primary-dark)] transition-colors duration-300 cursor-pointer text-center lg:text-left">
-            Estética dental
-          </div>
-          
-          <div class="bg-[var(--color-primary)] text-white px-6 py-3 lg:px-8 lg:py-4 rounded-full text-lg lg:text-xl font-semibold hover:bg-[var(--color-primary-dark)] transition-colors duration-300 cursor-pointer text-center lg:text-left">
-            Cirugía oral
-          </div>
-        </div>
-      </div>
+<section id="servicios" class="relative overflow-hidden bg-white">
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute -top-24 left-12 h-56 w-56 rounded-full bg-[var(--color-primary)]/10 blur-3xl"></div>
+    <div class="absolute -bottom-24 right-0 h-64 w-64 rounded-full bg-[var(--color-bg-light)]"></div>
+  </div>
 
-      <!-- Lado derecho - Imagen y CTA -->
-      <div class="services-visual order-1 lg:order-2">
-        <!-- Imagen de la doctora -->
-        <div class="relative mb-6 lg:mb-8">
-          <img 
-            src="/images/Fotos/DSC_0179.JPG" 
-            alt="Dra. Mariana Henao - Dentista profesional" 
-            class="w-full h-[300px] lg:h-[400px] object-cover rounded-2xl shadow-2xl"
-          />
-        </div>
-        
-        <!-- CTA -->
-        <div class="text-center">
-          <p class="text-lg lg:text-2xl font-bold text-[var(--color-primary)] mb-4">¡Ven y renueva tu sonrisa!</p>
-          <a 
-            href="https://wa.me/573102608676"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-block px-6 py-3 lg:px-8 lg:py-4 bg-[var(--color-primary)] text-white font-bold text-base lg:text-lg rounded-full hover:bg-[var(--color-primary-dark)] hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <span class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-bg-light)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[var(--color-primary)]">
+        Soluciones diseñadas para ti
+      </span>
+      <h2 class="mt-4 text-3xl font-semibold text-[var(--color-text-dark)] sm:text-[2.5rem]">
+        Tu camino hacia una sonrisa inquebrantable.
+      </h2>
+      <p class="mt-6 text-lg text-[var(--color-text-muted)]">
+        Paquetes modulares que combinan ciencia y empatía. Cada plan incluye seguimiento fotográfico, coaching de hábitos y acompañamiento por WhatsApp para resolver dudas entre citas.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-8 lg:grid-cols-3" role="list">
+      {[{
+        name: 'Estética Dental',
+        icon: '🎨',
+        description: 'Diseño de sonrisa digital, carillas de cerámica ultrafina y aclaramiento guiado.',
+        benefits: ['Mockup previo para aprobar tu nueva sonrisa', 'Carillas mínimamente invasivas con garantía de 3 años', 'Financiación hasta en 6 cuotas sin interés'],
+        metric: '92% mejora su percepción de confianza en la primera semana',
+      },
+      {
+        name: 'Odontología Clínica',
+        icon: '🦷',
+        description: 'Controles preventivos, limpiezas profundas, periodoncia y rehabilitación funcional.',
+        benefits: ['Chequeo integral con radiografía digital', 'Plan de prevención personalizado y recordatorios automáticos', 'Cobertura con aseguradoras aliadas y pagos flexibles'],
+        metric: '87% reduce emergencias dentales en el primer año',
+      },
+      {
+        name: 'Manejo de Bruxismo',
+        icon: '😌',
+        description: 'Diagnóstico integral, férulas personalizadas y terapia miofuncional para liberar tensión.',
+        benefits: ['Férula premium a la medida con entregas en 48h', 'Sesiones guiadas para relajar mandíbula y cuello', 'Apoyo interdisciplinario con fisioterapia y mindfulness'],
+        metric: '9 de cada 10 pacientes reportan dormir mejor en 2 semanas',
+      }].map((service) => (
+        <article
+          key={service.name}
+          class="group flex h-full flex-col rounded-3xl border border-[var(--color-primary)]/10 bg-white/95 p-8 shadow-[0_30px_70px_-45px_rgba(15,30,32,0.4)] transition-transform duration-300 hover:-translate-y-2"
+          role="listitem"
+        >
+          <div class="flex items-center justify-between">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-primary)]/12 text-xl">
+              <span aria-hidden="true">{service.icon}</span>
+            </div>
+            <span class="rounded-full bg-[var(--color-primary)]/10 px-3 py-1 text-xs font-semibold text-[var(--color-primary)]">
+              Plan empático
+            </span>
+          </div>
+          <h3 class="mt-6 text-2xl font-semibold text-[var(--color-text-dark)]">{service.name}</h3>
+          <p class="mt-3 text-base text-[var(--color-text-muted)]">{service.description}</p>
+          <ul class="mt-5 space-y-2 text-sm text-[var(--color-text-muted)]">
+            {service.benefits.map((benefit) => (
+              <li key={benefit} class="flex items-start gap-2">
+                <svg class="mt-1 h-4 w-4 text-[var(--color-primary)]" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M8 12l-2-2" />
+                  <path d="M8.5 11.5l3.5-3.5" />
+                  <path d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" />
+                </svg>
+                <span>{benefit}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="mt-6 rounded-2xl bg-[var(--color-bg-light)]/80 px-4 py-3 text-sm font-medium text-[var(--color-text-dark)]">
+            {service.metric}
+          </p>
+          <a
+            href="#contacto"
+            class="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-primary)] px-6 py-3 text-sm font-semibold text-white shadow-[0_22px_50px_-30px_rgba(0,168,157,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-primary-dark)]"
           >
-            Agenda tu cita ahora
+            Ver detalles y agenda tu plan
+            <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M5 10h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </a>
-        </div>
-      </div>
+        </article>
+      ))}
     </div>
   </div>
 </section>
-

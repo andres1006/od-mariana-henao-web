@@ -1,0 +1,131 @@
+---
+// Differentiator Section
+---
+
+<section id="promesa" class="relative overflow-hidden bg-[var(--color-bg-light)]">
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute -left-20 top-10 h-60 w-60 rounded-full bg-white/70 blur-2xl"></div>
+    <div class="absolute -right-10 bottom-0 h-80 w-80 rounded-full bg-[var(--color-primary)]/12 blur-3xl"></div>
+  </div>
+
+  <div class="relative mx-auto grid max-w-7xl items-center gap-16 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
+    <div class="order-2 space-y-8 lg:order-1">
+      <span class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--color-primary)] shadow-sm shadow-[var(--color-primary)]/10">
+        La promesa de Mariana Henao
+      </span>
+      <h2 class="text-balance text-3xl font-semibold text-[var(--color-text-dark)] sm:text-[2.5rem]">
+        Cuidado empático respaldado por evidencia y resultados naturales.
+      </h2>
+      <p class="text-lg text-[var(--color-text-muted)]">
+        Cada valoración es un espacio seguro para hablar de tus miedos y sueños. Mapeamos tu sonrisa con tecnología digital, definimos un plan paso a paso y te acompañamos personalmente hasta que te sientas plena.
+      </p>
+
+      <div class="grid gap-5 sm:grid-cols-3">
+        <div class="rounded-2xl bg-white/95 p-5 shadow-[0_25px_50px_-40px_rgba(15,30,32,0.4)]">
+          <p class="text-3xl font-semibold text-[var(--color-primary)]">98%</p>
+          <p class="mt-1 text-sm text-[var(--color-text-muted)]">reporta cero dolor en la primera cita.</p>
+        </div>
+        <div class="rounded-2xl bg-white/95 p-5 shadow-[0_25px_50px_-40px_rgba(15,30,32,0.4)]">
+          <p class="text-3xl font-semibold text-[var(--color-primary)]">+540</p>
+          <p class="mt-1 text-sm text-[var(--color-text-muted)]">sonrisas transformadas con resultados naturales.</p>
+        </div>
+        <div class="rounded-2xl bg-white/95 p-5 shadow-[0_25px_50px_-40px_rgba(15,30,32,0.4)]">
+          <p class="text-3xl font-semibold text-[var(--color-primary)]">15 min</p>
+          <p class="mt-1 text-sm text-[var(--color-text-muted)]">promedio de respuesta por WhatsApp.</p>
+        </div>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        {[{
+          label: 'Experiencia sin dolor ni ansiedad',
+          description: 'Sedación consciente, protocolos de pausa y comunicación constante para que disfrutes el proceso.',
+        },
+        {
+          label: 'Resultados 100% naturales',
+          description: 'Simulación digital, mockups y materiales biomiméticos que honran tu rostro y tu historia.',
+        },
+        {
+          label: 'Transparencia radical',
+          description: 'Te compartimos un dossier con tiempos, inversión y garantías para que tomes decisiones informadas.',
+        },
+        {
+          label: 'Acompañamiento post-tratamiento',
+          description: 'Seguimiento virtual y presencial para asegurar la adaptación y bienestar en cada etapa.',
+        }].map((item) => (
+          <div key={item.label} class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-[0_18px_50px_-38px_rgba(15,30,32,0.45)]">
+            <div class="mt-1 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-[var(--color-primary)]/12 text-[var(--color-primary)]">
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M8.5 13.5l-2-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M8 10.5l1.5 1.5 3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-base font-semibold text-[var(--color-text-dark)]">{item.label}</h3>
+              <p class="mt-1 text-sm text-[var(--color-text-muted)]">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="flex flex-wrap items-center gap-4">
+        <a
+          href="#contacto"
+          class="inline-flex items-center gap-2 rounded-full bg-[var(--color-primary)] px-6 py-3 text-sm font-semibold text-white shadow-[0_20px_40px_-28px_rgba(0,168,157,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-primary-dark)]"
+        >
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 5h14" />
+            <path d="M5 3v4" />
+            <path d="M15 3v4" />
+            <path d="M3 9h14" />
+            <path d="M4 9v7a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9" />
+          </svg>
+          Agenda protocolos personalizados
+        </a>
+        <a
+          href="#contacto"
+          class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] transition-colors duration-300 hover:text-[var(--color-primary-dark)]"
+        >
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2h6l4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z" />
+            <path d="M11 2v4h4" />
+            <path d="M8 11h4" />
+            <path d="M8 15h4" />
+          </svg>
+          Solicita los protocolos en PDF
+        </a>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-3">
+        {["Miembro AACD", "Certificación Invisalign", "Universidad Autónoma"].map((item) => (
+          <div key={item} class="flex items-center justify-center rounded-2xl border border-[var(--color-primary)]/10 bg-white/80 px-4 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-[var(--color-text-muted)]">
+            {item}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="order-1 lg:order-2">
+      <div class="relative mx-auto w-full max-w-md sm:max-w-lg">
+        <div class="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-white via-[var(--color-primary)]/15 to-[var(--color-accent)]/15 blur-2xl"></div>
+        <div class="relative overflow-hidden rounded-[3rem] border border-white/60 bg-white shadow-[0_40px_80px_-45px_rgba(15,30,32,0.45)]">
+          <img
+            src="/images/Fotos/DSC02636.jpg"
+            alt="Equipo de Mariana Henao acompañando a una paciente"
+            class="h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="absolute -bottom-14 left-1/2 hidden w-[85%] -translate-x-1/2 rounded-3xl bg-white/95 p-6 text-left shadow-[0_28px_70px_-40px_rgba(15,30,32,0.5)] backdrop-blur sm:block">
+          <p class="text-sm font-semibold text-[var(--color-text-dark)]">Ruta empática en 3 momentos</p>
+          <div class="mt-3 space-y-2 text-xs text-[var(--color-text-muted)]">
+            <p><span class="font-semibold text-[var(--color-primary)]">1.</span> Escucha empática y diseño digital.</p>
+            <p><span class="font-semibold text-[var(--color-primary)]">2.</span> Sesiones suaves con controles de confort.</p>
+            <p><span class="font-semibold text-[var(--color-primary)]">3.</span> Seguimiento personalizado para sostener resultados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
