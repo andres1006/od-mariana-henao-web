@@ -1,5 +1,44 @@
 ---
 // Services Section
+
+const services = [
+  {
+    id: 'estetica-dental',
+    name: 'Estética Dental',
+    icon: '🎨',
+    description: 'Diseño de sonrisa digital, carillas de cerámica ultrafina y aclaramiento guiado.',
+    benefits: [
+      'Mockup previo para aprobar tu nueva sonrisa',
+      'Carillas mínimamente invasivas con garantía de 3 años',
+      'Financiación hasta en 6 cuotas sin interés',
+    ],
+    metric: '92% mejora su percepción de confianza en la primera semana',
+  },
+  {
+    id: 'odontologia-clinica',
+    name: 'Odontología Clínica',
+    icon: '🦷',
+    description: 'Controles preventivos, limpiezas profundas, periodoncia y rehabilitación funcional.',
+    benefits: [
+      'Chequeo integral con radiografía digital',
+      'Plan de prevención personalizado y recordatorios automáticos',
+      'Cobertura con aseguradoras aliadas y pagos flexibles',
+    ],
+    metric: '87% reduce emergencias dentales en el primer año',
+  },
+  {
+    id: 'manejo-bruxismo',
+    name: 'Manejo de Bruxismo',
+    icon: '😌',
+    description: 'Diagnóstico integral, férulas personalizadas y terapia miofuncional para liberar tensión.',
+    benefits: [
+      'Férula premium a la medida con entregas en 48h',
+      'Sesiones guiadas para relajar mandíbula y cuello',
+      'Apoyo interdisciplinario con fisioterapia y mindfulness',
+    ],
+    metric: '9 de cada 10 pacientes reportan dormir mejor en 2 semanas',
+  },
+];
 ---
 
 <section id="servicios" class="relative overflow-hidden bg-white">
@@ -21,32 +60,15 @@
       </p>
     </div>
 
-    <div class="mt-12 grid gap-8 lg:grid-cols-3" role="list">
-      {[{
-        name: 'Estética Dental',
-        icon: '🎨',
-        description: 'Diseño de sonrisa digital, carillas de cerámica ultrafina y aclaramiento guiado.',
-        benefits: ['Mockup previo para aprobar tu nueva sonrisa', 'Carillas mínimamente invasivas con garantía de 3 años', 'Financiación hasta en 6 cuotas sin interés'],
-        metric: '92% mejora su percepción de confianza en la primera semana',
-      },
-      {
-        name: 'Odontología Clínica',
-        icon: '🦷',
-        description: 'Controles preventivos, limpiezas profundas, periodoncia y rehabilitación funcional.',
-        benefits: ['Chequeo integral con radiografía digital', 'Plan de prevención personalizado y recordatorios automáticos', 'Cobertura con aseguradoras aliadas y pagos flexibles'],
-        metric: '87% reduce emergencias dentales en el primer año',
-      },
-      {
-        name: 'Manejo de Bruxismo',
-        icon: '😌',
-        description: 'Diagnóstico integral, férulas personalizadas y terapia miofuncional para liberar tensión.',
-        benefits: ['Férula premium a la medida con entregas en 48h', 'Sesiones guiadas para relajar mandíbula y cuello', 'Apoyo interdisciplinario con fisioterapia y mindfulness'],
-        metric: '9 de cada 10 pacientes reportan dormir mejor en 2 semanas',
-      }].map((service) => (
+    <div class="mt-12 grid gap-8 lg:grid-cols-3" role="list" aria-label="Servicios odontológicos empáticos">
+      {services.map((service) => (
         <article
-          key={service.name}
-          class="group flex h-full flex-col rounded-3xl border border-[var(--color-primary)]/10 bg-white/95 p-8 shadow-[0_30px_70px_-45px_rgba(15,30,32,0.4)] transition-transform duration-300 hover:-translate-y-2"
+          key={service.id}
+          id={service.id}
           role="listitem"
+          aria-labelledby={`${service.id}-title`}
+          aria-describedby={`${service.id}-desc`}
+          class="group flex h-full flex-col rounded-3xl border border-[var(--color-primary)]/12 bg-white/95 p-8 shadow-[0_24px_60px_-40px_rgba(15,30,32,0.32)] transition-transform duration-300 hover:-translate-y-2"
         >
           <div class="flex items-center justify-between">
             <div class="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-primary)]/12 text-xl">
@@ -56,8 +78,8 @@
               Plan empático
             </span>
           </div>
-          <h3 class="mt-6 text-2xl font-semibold text-[var(--color-text-dark)]">{service.name}</h3>
-          <p class="mt-3 text-base text-[var(--color-text-muted)]">{service.description}</p>
+          <h3 id={`${service.id}-title`} class="mt-6 text-2xl font-semibold text-[var(--color-text-dark)]">{service.name}</h3>
+          <p id={`${service.id}-desc`} class="mt-3 text-base text-[var(--color-text-muted)]">{service.description}</p>
           <ul class="mt-5 space-y-2 text-sm text-[var(--color-text-muted)]">
             {service.benefits.map((benefit) => (
               <li key={benefit} class="flex items-start gap-2">
