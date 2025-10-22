@@ -21,7 +21,11 @@
       </p>
     </div>
 
-    <div class="mt-12 grid gap-6 md:grid-cols-3">
+    <div
+      class="mt-12 grid gap-6 md:grid-cols-3"
+      role="list"
+      aria-label="Situaciones comunes que resolvemos a diario"
+    >
       {[
         {
           icon: (
@@ -63,7 +67,11 @@
             'Las malas experiencias te frenan. Con protocolos sin dolor, tiempos explicados y acompañamiento 1 a 1, sentirás que cada decisión es tuya.',
         },
       ].map((item) => (
-        <article key={item.title} class="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-[var(--color-primary)]/10 bg-white/95 p-8 shadow-[0_30px_60px_-45px_rgba(15,30,32,0.35)] transition-transform duration-300 hover:-translate-y-1.5">
+        <article
+          key={item.title}
+          role="listitem"
+          class="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-[var(--color-primary)]/12 bg-white/95 p-8 shadow-[0_22px_55px_-40px_rgba(15,30,32,0.3)] transition-transform duration-300 hover:-translate-y-1.5"
+        >
           <div class="flex items-center gap-4">
             <div class="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-primary)]/12">
               {item.icon}
