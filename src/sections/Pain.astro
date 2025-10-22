@@ -9,7 +9,7 @@
   </div>
 
   <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-3xl text-center">
+    <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
       <span class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-bg-light)]/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-primary)]">
         ¿Te identificas?
       </span>
@@ -66,11 +66,13 @@
           description:
             'Las malas experiencias te frenan. Con protocolos sin dolor, tiempos explicados y acompañamiento 1 a 1, sentirás que cada decisión es tuya.',
         },
-      ].map((item) => (
+      ].map((item, index) => (
         <article
           key={item.title}
           role="listitem"
           class="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-[var(--color-primary)]/12 bg-white/95 p-8 shadow-[0_22px_55px_-40px_rgba(15,30,32,0.3)] transition-transform duration-300 hover:-translate-y-1.5"
+          data-aos="fade-up"
+          data-aos-delay={`${index * 120 + 100}`}
         >
           <div class="flex items-center gap-4">
             <div class="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-primary)]/12">
