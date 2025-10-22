@@ -1,5 +1,39 @@
 ---
 // Testimonials Section
+const testimonials = [
+  {
+    name: 'Laura Pérez',
+    service: 'Diseño de sonrisa',
+    quote:
+      'Pasé de esconderme en las fotos a amar cada retrato. Jamás imaginé que sería tan cómodo y cero doloroso.',
+    before: 'Se tapaba la boca en reuniones sociales',
+    after: 'Hoy sonríe en cada foto y lidera presentaciones con seguridad',
+  },
+  {
+    name: 'Daniela Rodríguez',
+    service: 'Carillas personalizadas',
+    quote:
+      'Me hablaron con tanta claridad que dejé de sentir miedo. Cada sesión fue suave y llena de paciencia.',
+    before: 'Desconfianza por experiencias negativas',
+    after: 'Recuperó la tranquilidad y recibe cumplidos diarios',
+  },
+  {
+    name: 'Marcela López',
+    service: 'Manejo de bruxismo',
+    quote:
+      'Con la férula y las rutinas de relajación duermo profundo. Ya no me levanto con dolor de cabeza.',
+    before: 'Dolor mandibular y cansancio matutino',
+    after: 'Sueño reparador y energía para sus clases de yoga',
+  },
+  {
+    name: 'Juliana Sánchez',
+    service: 'Rehabilitación integral',
+    quote:
+      'Sentí que mi historia importaba. Me acompañaron en cada decisión y el resultado es totalmente natural.',
+    before: 'Inseguridad al hablar en público',
+    after: 'Confianza inquebrantable en eventos empresariales',
+  },
+];
 ---
 
 <section id="testimonios" class="relative overflow-hidden bg-[var(--color-bg-soft)]">
@@ -37,36 +71,17 @@
       </span>
     </div>
 
-    <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-      {[{
-        name: 'Laura Pérez',
-        service: 'Diseño de sonrisa',
-        quote: 'Pasé de esconderme en las fotos a amar cada retrato. Jamás imaginé que sería tan cómodo y cero doloroso.',
-        before: 'Se tapaba la boca en reuniones sociales',
-        after: 'Hoy sonríe en cada foto y lidera presentaciones con seguridad',
-      },
-      {
-        name: 'Daniela Rodríguez',
-        service: 'Carillas personalizadas',
-        quote: 'Me hablaron con tanta claridad que dejé de sentir miedo. Cada sesión fue suave y llena de paciencia.',
-        before: 'Desconfianza por experiencias negativas',
-        after: 'Recuperó la tranquilidad y recibe cumplidos diarios',
-      },
-      {
-        name: 'Marcela López',
-        service: 'Manejo de bruxismo',
-        quote: 'Con la férula y las rutinas de relajación duermo profundo. Ya no me levanto con dolor de cabeza.',
-        before: 'Dolor mandibular y cansancio matutino',
-        after: 'Sueño reparador y energía para sus clases de yoga',
-      },
-      {
-        name: 'Juliana Sánchez',
-        service: 'Rehabilitación integral',
-        quote: 'Sentí que mi historia importaba. Me acompañaron en cada decisión y el resultado es totalmente natural.',
-        before: 'Inseguridad al hablar en público',
-        after: 'Confianza inquebrantable en eventos empresariales',
-      }].map((testimonial) => (
-        <article key={testimonial.name} class="flex h-full flex-col justify-between rounded-3xl border border-[var(--color-primary)]/10 bg-white/95 p-8 shadow-[0_25px_65px_-45px_rgba(15,30,32,0.4)]">
+    <div
+      class="mt-12 grid auto-cols-[85%] grid-flow-col gap-6 overflow-x-auto pb-8 pl-4 pr-8 snap-x snap-mandatory sm:auto-cols-[minmax(320px,1fr)] sm:pr-10 md:auto-cols-auto md:grid-cols-2 md:grid-flow-row md:overflow-visible md:pb-0 md:pl-0 md:pr-0 md:snap-none lg:grid-cols-3 xl:grid-cols-4"
+      role="list"
+      aria-label="Testimonios de pacientes"
+    >
+      {testimonials.map((testimonial) => (
+        <article
+          key={testimonial.name}
+          role="listitem"
+          class="flex h-full min-h-[360px] min-w-[78vw] snap-start flex-col justify-between rounded-3xl border border-[var(--color-primary)]/10 bg-white/95 p-8 shadow-[0_25px_65px_-45px_rgba(15,30,32,0.4)] transition-transform duration-300 hover:-translate-y-1 sm:min-w-[320px] md:min-h-0 md:min-w-0 md:justify-between md:hover:-translate-y-1.5"
+        >
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
               <div class="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-primary)]/12 text-base font-semibold text-[var(--color-primary)]">
