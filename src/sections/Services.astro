@@ -48,7 +48,7 @@ const services = [
   </div>
 
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-3xl text-center">
+    <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
       <span class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-bg-light)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[var(--color-primary)]">
         Soluciones diseñadas para ti
       </span>
@@ -61,7 +61,7 @@ const services = [
     </div>
 
     <div class="mt-12 grid gap-8 lg:grid-cols-3" role="list" aria-label="Servicios odontológicos empáticos">
-      {services.map((service) => (
+      {services.map((service, index) => (
         <article
           key={service.id}
           id={service.id}
@@ -69,6 +69,8 @@ const services = [
           aria-labelledby={`${service.id}-title`}
           aria-describedby={`${service.id}-desc`}
           class="group flex h-full flex-col rounded-3xl border border-[var(--color-primary)]/12 bg-white/95 p-8 shadow-[0_24px_60px_-40px_rgba(15,30,32,0.32)] transition-transform duration-300 hover:-translate-y-2"
+          data-aos="fade-up"
+          data-aos-delay={`${index * 120 + 100}`}
         >
           <div class="flex items-center justify-between">
             <div class="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-primary)]/12 text-xl">

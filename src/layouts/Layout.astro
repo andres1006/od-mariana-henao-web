@@ -4,7 +4,7 @@ interface Props {
   description?: string;
 }
 
-const { 
+const {
   title = 'Odontóloga Mariana Henao | Manizales',
   description = 'Odontología especializada para una sonrisa saludable y hermosa. Servicios de prevención, rehabilitación oral, estética dental y cirugía oral en Manizales.'
 } = Astro.props;
@@ -19,6 +19,8 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -44,6 +46,24 @@ const {
   </head>
   <body>
     <slot />
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+    <script is:inline>
+      const initAOS = () => {
+        if (window.AOS) {
+          window.AOS.init({
+            once: true,
+            duration: 800,
+            offset: 80,
+            easing: 'ease-out-cubic',
+          });
+          window.AOS.refreshHard?.();
+        }
+      };
+
+      window.addEventListener('load', initAOS);
+      document.addEventListener('astro:page-load', initAOS);
+    </script>
   </body>
 </html>
 
